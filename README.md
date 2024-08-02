@@ -69,15 +69,19 @@ The application consists of two main components:
 - **Embedding Creation**: Run create_embeddings.ipynb to process the PDF files and generate the pickle file with vector embeddings.
 - **Streamlit App**: Use legal_app.py to launch the web interface for searching and analyzing potential trademark infringements.
 
-## Project Structure
-trademark-infringement-ai/
-│
+## Project Structure 
 ├── create_embeddings.ipynb   # Script to create and store vector embeddings
+
 ├── company_data.pickle       # Pickle file for company data and details
+
 ├── legal_app.py              # Streamlit application for similarity search and analysis
+
 ├── data/                     # Directory containing the PDF files
+
 ├── faiss_index/              # Directory to store the vector embeddings using FAISS (Embeddings of just the name of companies)
+
 ├── requirements.txt          # Python dependencies
+
 └── README.md                 # Project documentation
 
 ## Future Work
