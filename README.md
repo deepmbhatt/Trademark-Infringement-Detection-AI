@@ -2,7 +2,12 @@
 
 This project leverages AI to detect potential trademark infringement by comparing company names with existing trademarks registered in India. The system uses LangChain, FAISS, Google Generative AI, and Streamlit to analyze and identify similarities in names, spelling, and pronunciation.
 
+## Trademark Journal Website
+- by Government of India (GOI)
+https://search.ipindia.gov.in/IPOJournal/Journal/Trademark
+
 ## Overview
+![WhatsApp Image 2024-08-02 at 23 10 46_f348ab02](https://github.com/user-attachments/assets/7a22eaa6-241f-4404-9143-0a00afdd3174)
 
 The application consists of two main components:
 
@@ -68,9 +73,10 @@ The application consists of two main components:
 trademark-infringement-ai/
 │
 ├── create_embeddings.ipynb   # Script to create and store vector embeddings
+├── company_data.pickle       # Pickle file for company data and details
 ├── legal_app.py              # Streamlit application for similarity search and analysis
 ├── data/                     # Directory containing the PDF files
-├── embeddings/               # Directory to store the pickle file with embeddings
+├── faiss_index/              # Directory to store the vector embeddings using FAISS (Embeddings of just the name of companies)
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
 
