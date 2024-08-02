@@ -1,0 +1,6 @@
+langchain
+langchain_google_genai
+streamlit
+pickle
+PyPDF2
+FAISS
