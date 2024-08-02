@@ -1,2 +1,98 @@
-# Trademark-Infringement-Detection-AI
-AI-powered tool for detecting potential trademark infringement by analyzing company names against registered trademarks in India. Utilizes LangChain, FAISS, Google Generative AI, and Streamlit for similarity search and analysis. Includes an interactive Streamlit app for user-friendly queries and results.
+# Trademark Infringement Detection AI
+
+This project leverages AI to detect potential trademark infringement by comparing company names with existing trademarks registered in India. The system uses LangChain, FAISS, Google Generative AI, and Streamlit to analyze and identify similarities in names, spelling, and pronunciation.
+
+## Overview
+
+The application consists of two main components:
+
+1. **Embedding Creation and Storage**:
+   - Processes a collection of 8 PDF files containing registered trademark details and extracts vector embeddings.
+   - Stores the embeddings in a pickle file for efficient retrieval.
+
+2. **Streamlit Application**:
+   - A user-friendly interface for performing similarity searches on the stored embeddings.
+   - Identifies company names similar to the queried name and further analyzes these results using a language model (LLM).
+
+## Features
+
+- **Google Generative AI**: Converts the company names to vector embeddings.
+- **Similarity Search**: Uses FAISS to perform fast similarity searches on the stored vector embeddings.
+- **LLM Analysis**: Analyzes the most similar results using a language model to provide deeper insights into potential infringement issues.
+- **Interactive Interface**: A Streamlit-based application allows users to easily input queries and view results.
+- **RAG and Chaining**: The LLM uses Retrieval-Augmented Generation (RAG) and chaining techniques to generate the most accurate and relevant results.
+
+## How It Works
+
+1. **Data Preparation**: 
+   - PDFs containing trademark details are processed to extract text and create embeddings.
+   - The embeddings are saved in a pickle file for future use.
+
+2. **Similarity Search**:
+   - The Streamlit app allows users to enter a company name.
+   - The system searches for similar names based on embeddings and returns the closest matches.
+
+3. **Analysis**:
+   - The most similar company names are analyzed using Google Generative AI. The LLM utilizes RAG and chaining methods to detect potential legal issues, considering spelling and pronunciation similarities.
+
+## Setup
+
+### Prerequisites
+
+- Python 3.8+
+- [Streamlit](https://streamlit.io/)
+- [LangChain](https://langchain.readthedocs.io/)
+- [FAISS](https://python.langchain.com/v0.2/docs/integrations/vectorstores/faiss/)
+- [Google Generative AI](https://ai.google/)
+
+### Installation
+
+1. Clone the repository:
+
+       git clone https://github.com/deepmbhatt/Trademark-Infringement-Detection-AI.git
+
+2. Install dependencies:
+
+        pip install -r requirements.txt
+
+3. Start the Streamlit application:
+
+        streamlit run legal_app.py
+
+   
+## Usage
+- **Embedding Creation**: Run create_embeddings.ipynb to process the PDF files and generate the pickle file with vector embeddings.
+- **Streamlit App**: Use legal_app.py to launch the web interface for searching and analyzing potential trademark infringements.
+
+## Project Structure
+trademark-infringement-ai/
+│
+├── create_embeddings.ipynb   # Script to create and store vector embeddings
+├── legal_app.py              # Streamlit application for similarity search and analysis
+├── data/                     # Directory containing the PDF files
+├── embeddings/               # Directory to store the pickle file with embeddings
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
+
+## Future Work
+- Integrate additional AI models for more accurate pronunciation similarity detection.
+- Enhance the user interface for better user experience.
+- Expand the database to include international trademarks.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Working:
+
+- Search results for the company name: Koler
+![image](https://github.com/user-attachments/assets/ca928f9c-d1f2-4146-8672-e4f4dbfe34f3)
+![image](https://github.com/user-attachments/assets/a8123511-59eb-4261-8b4c-3aefeb2ee01a)
+
+- Search results for company name: Laxmi
+![image](https://github.com/user-attachments/assets/c5dbb8a6-8ffc-4c8f-9dbf-07da01fa2cca)
+![image](https://github.com/user-attachments/assets/56095b40-998c-406c-b6fb-c6f80dba1689)
+![image](https://github.com/user-attachments/assets/322bbee8-dcfa-4bcb-bc39-9b5037d87cfc)
+
+
+
+
