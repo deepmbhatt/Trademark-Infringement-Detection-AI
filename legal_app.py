@@ -8,7 +8,7 @@ from langchain.chains.question_answering import load_qa_chain
 import pickle
 with open('company_data.pickle', 'rb') as f:
     company_data = pickle.load(f)
-api_key = "AIzaSyAe9h1Xl8aFGZcEAjF-g6diBi0-1zxpBU4"
+api_key = "[api_key]"
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=api_key)
 llm = GoogleGenerativeAI(model="models/text-bison-001", google_api_key=api_key, temperature=0, max_output_tokens=1000)
 
