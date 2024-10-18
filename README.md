@@ -1,4 +1,4 @@
-# Trademark Infringement Detection AI
+# Trademark Vigilant AI
 
 This project leverages AI to detect potential trademark infringement by comparing company names with existing trademarks registered in India. The system uses LangChain, FAISS, Google Generative AI, and Streamlit to analyze and identify similarities in names, spelling, and pronunciation.
 
